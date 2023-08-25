@@ -1,24 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="46r-Yq-GYX">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="2vV-kP-IUG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hey-cB-xD9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="yyyy-mm-dd" translatesAutoresizingMaskIntoConstraints="NO" id="RaL-jb-ZRI">
+                                <rect key="frame" x="4" y="63" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2vV-kP-IUG" id="eVd-ww-dte"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1D3-nC-oUG">
+                                <rect key="frame" x="4" y="123" width="385" height="691"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="roverCell" rowHeight="175" id="AVr-cs-YB9">
+                                        <rect key="frame" x="0.0" y="50" width="385" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AVr-cs-YB9" id="Miq-fC-4KE">
+                                            <rect key="frame" x="0.0" y="0.0" width="385" height="175"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jc9-RL-aQI">
+                                                    <rect key="frame" x="24" y="15" width="337" height="145"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="(camera name)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aei-t5-OC0">
+                                                            <rect key="frame" x="96.666666666666686" y="0.0" width="144" height="26.666666666666668"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rtx-fu-Ztr">
+                                                            <rect key="frame" x="48.666666666666686" y="34.666666666666664" width="240" height="110.33333333333334"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jc9-RL-aQI" firstAttribute="leading" secondItem="Miq-fC-4KE" secondAttribute="leadingMargin" constant="4" id="CVs-BV-y3m"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jc9-RL-aQI" secondAttribute="bottom" constant="4" id="SgZ-U2-BE0"/>
+                                                <constraint firstItem="jc9-RL-aQI" firstAttribute="top" secondItem="Miq-fC-4KE" secondAttribute="topMargin" constant="4" id="cK8-Hh-EaA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jc9-RL-aQI" secondAttribute="trailing" constant="4" id="yw8-N4-geF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="roverCameraImageView" destination="Rtx-fu-Ztr" id="1Dy-DV-uno"/>
+                                            <outlet property="roverCameraNameLabel" destination="Aei-t5-OC0" id="isf-SX-YzI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OZZ-t3-iQ3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RaL-jb-ZRI" firstAttribute="trailing" secondItem="OZZ-t3-iQ3" secondAttribute="trailing" constant="4" id="5mQ-BR-GQF"/>
+                            <constraint firstItem="RaL-jb-ZRI" firstAttribute="leading" secondItem="OZZ-t3-iQ3" secondAttribute="leading" constant="4" id="EC4-Xw-FGD"/>
+                            <constraint firstItem="1D3-nC-oUG" firstAttribute="leading" secondItem="OZZ-t3-iQ3" secondAttribute="leading" constant="4" id="I10-Ko-Yvd"/>
+                            <constraint firstItem="OZZ-t3-iQ3" firstAttribute="trailing" secondItem="1D3-nC-oUG" secondAttribute="trailing" constant="4" id="NeH-6J-14e"/>
+                            <constraint firstItem="RaL-jb-ZRI" firstAttribute="top" secondItem="OZZ-t3-iQ3" secondAttribute="top" constant="4" id="RNu-eb-N1G"/>
+                            <constraint firstItem="1D3-nC-oUG" firstAttribute="top" secondItem="RaL-jb-ZRI" secondAttribute="bottom" constant="4" id="bP9-9r-UZ9"/>
+                            <constraint firstItem="OZZ-t3-iQ3" firstAttribute="bottom" secondItem="1D3-nC-oUG" secondAttribute="bottom" constant="4" id="xgB-fd-Brs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="roverSearchBar" destination="RaL-jb-ZRI" id="zaT-cW-XNy"/>
+                        <outlet property="roverTableView" destination="1D3-nC-oUG" id="zhi-up-aIC"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Yd-3h-JkU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="925" y="84"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -12,6 +12,8 @@
 		44BC796B2A42797B00C39FF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44BC79692A42797B00C39FF4 /* Main.storyboard */; };
 		44BC796D2A42797D00C39FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44BC796C2A42797D00C39FF4 /* Assets.xcassets */; };
 		44BC79702A42797D00C39FF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44BC796E2A42797D00C39FF4 /* LaunchScreen.storyboard */; };
+		44BC797B2A427A0B00C39FF4 /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BC797A2A427A0B00C39FF4 /* Rover.swift */; };
+		44BC797F2A427BB400C39FF4 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BC797E2A427BB400C39FF4 /* NetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		44BC796C2A42797D00C39FF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44BC796F2A42797D00C39FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44BC79712A42797D00C39FF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44BC797A2A427A0B00C39FF4 /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
+		44BC797E2A427BB400C39FF4 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		44BC79622A42797B00C39FF4 /* Assessment4 */ = {
 			isa = PBXGroup;
 			children = (
+				44BC797C2A427BA600C39FF4 /* Controllers */,
+				44BC79792A427A0300C39FF4 /* Models */,
 				44BC79782A4279AF00C39FF4 /* Storyboards */,
 				44BC79772A42799200C39FF4 /* SupportingFiles */,
 			);
@@ -78,6 +84,30 @@
 				44BC796E2A42797D00C39FF4 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		44BC79792A427A0300C39FF4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				44BC797A2A427A0B00C39FF4 /* Rover.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		44BC797C2A427BA600C39FF4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				44BC797D2A427BAA00C39FF4 /* ModelControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		44BC797D2A427BAA00C39FF4 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				44BC797E2A427BB400C39FF4 /* NetworkController.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44BC797F2A427BB400C39FF4 /* NetworkController.swift in Sources */,
 				44BC79642A42797B00C39FF4 /* AppDelegate.swift in Sources */,
 				44BC79662A42797B00C39FF4 /* SceneDelegate.swift in Sources */,
+				44BC797B2A427A0B00C39FF4 /* Rover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
