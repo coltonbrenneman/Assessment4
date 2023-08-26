@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		441F90D82A9830ED006E209E /* RoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F90D72A9830EC006E209E /* RoverViewController.swift */; };
+		441F90DB2A98314F006E209E /* RoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F90DA2A98314F006E209E /* RoverTableViewCell.swift */; };
+		441F90DD2A99B45D006E209E /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441F90DC2A99B45D006E209E /* ResultError.swift */; };
 		44BC79642A42797B00C39FF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BC79632A42797B00C39FF4 /* AppDelegate.swift */; };
 		44BC79662A42797B00C39FF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BC79652A42797B00C39FF4 /* SceneDelegate.swift */; };
 		44BC796B2A42797B00C39FF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44BC79692A42797B00C39FF4 /* Main.storyboard */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		441F90D72A9830EC006E209E /* RoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverViewController.swift; sourceTree = "<group>"; };
+		441F90DA2A98314F006E209E /* RoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverTableViewCell.swift; sourceTree = "<group>"; };
+		441F90DC2A99B45D006E209E /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
 		44BC79602A42797B00C39FF4 /* Assessment4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assessment4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BC79632A42797B00C39FF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44BC79652A42797B00C39FF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		441F90D62A9830D6006E209E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				441F90D72A9830EC006E209E /* RoverViewController.swift */,
+				441F90D92A983137006E209E /* CustomCell */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		441F90D92A983137006E209E /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				441F90DA2A98314F006E209E /* RoverTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		44BC79572A42797B00C39FF4 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +81,9 @@
 		44BC79622A42797B00C39FF4 /* Assessment4 */ = {
 			isa = PBXGroup;
 			children = (
-				44BC797C2A427BA600C39FF4 /* Controllers */,
 				44BC79792A427A0300C39FF4 /* Models */,
+				44BC797D2A427BAA00C39FF4 /* Networking */,
+				44BC797C2A427BA600C39FF4 /* Controllers */,
 				44BC79782A4279AF00C39FF4 /* Storyboards */,
 				44BC79772A42799200C39FF4 /* SupportingFiles */,
 			);
@@ -97,17 +121,18 @@
 		44BC797C2A427BA600C39FF4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				44BC797D2A427BAA00C39FF4 /* ModelControllers */,
+				441F90D62A9830D6006E209E /* ViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		44BC797D2A427BAA00C39FF4 /* ModelControllers */ = {
+		44BC797D2A427BAA00C39FF4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				44BC797E2A427BB400C39FF4 /* NetworkController.swift */,
+				441F90DC2A99B45D006E209E /* ResultError.swift */,
 			);
-			path = ModelControllers;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,8 +207,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				44BC797F2A427BB400C39FF4 /* NetworkController.swift in Sources */,
+				441F90D82A9830ED006E209E /* RoverViewController.swift in Sources */,
 				44BC79642A42797B00C39FF4 /* AppDelegate.swift in Sources */,
+				441F90DD2A99B45D006E209E /* ResultError.swift in Sources */,
 				44BC79662A42797B00C39FF4 /* SceneDelegate.swift in Sources */,
+				441F90DB2A98314F006E209E /* RoverTableViewCell.swift in Sources */,
 				44BC797B2A427A0B00C39FF4 /* Rover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
