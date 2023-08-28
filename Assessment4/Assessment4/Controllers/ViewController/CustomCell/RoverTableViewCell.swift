@@ -8,16 +8,29 @@
 import UIKit
 
 class RoverTableViewCell: UITableViewCell {
+    
+    // MARK: - Outlets
+    @IBOutlet weak var roverNameLabel: UILabel!
+    @IBOutlet weak var roverImageView: UIImageView!
+    
+    // MARK: - Functions
+    func updateUI(with rover: Photo?) {
+        guard let rover = rover else { return }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+        NetworkController().fetchImage(with: rover.imagePath) { [weak self] result in
+            switch result {
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self?.roverImageView.image = image
+                    self?.roverNameLabel.text = rover.camera.cameraName
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self?.roverImageView.image = UIImage(named: "colton")
+                    self?.roverNameLabel.text = "Error: \(error)"
+                    // Handle other UI elements accordingly
+                }
+            }
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
-}
+} // End of class
