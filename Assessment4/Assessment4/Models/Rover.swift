@@ -65,7 +65,7 @@ struct Photo: Decodable {
     let sol: Int
     let imagePath: String
     let earthDate: String
-    let camera: Camera // The camera information directly under the photo
+    let camera: Camera
     let rover: Rover
 }
 

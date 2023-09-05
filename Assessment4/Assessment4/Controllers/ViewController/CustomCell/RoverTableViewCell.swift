@@ -18,6 +18,7 @@ class RoverTableViewCell: UITableViewCell {
         guard let rover = rover else { return }
 
         NetworkController().fetchImage(with: rover.imagePath) { [weak self] result in
+            print(rover.imagePath)
             switch result {
             case .success(let image):
                 DispatchQueue.main.async {
@@ -28,9 +29,9 @@ class RoverTableViewCell: UITableViewCell {
                 DispatchQueue.main.async {
                     self?.roverImageView.image = UIImage(named: "colton")
                     self?.roverNameLabel.text = "Error: \(error)"
-                    // Handle other UI elements accordingly
                 }
             }
         }
     }
+
 } // End of class
